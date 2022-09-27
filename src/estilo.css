@@ -48,9 +48,6 @@
 }
 .menu .home{
   height: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   border: 1px solid var(--hover-dark);
 }
 .menu .cerrar .btnCerrar{
