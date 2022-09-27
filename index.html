@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+    <title>MENU BAR WITH RESPONSIVE</title>
+		<link rel="stylesheet" type="text/css" href="./src/estilo.css">
+		<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <body>
+
+    <div class="nav_bar"><img src="./images/menu-bar.png" id="btnMenu"></div>
+    <nav class="main-nav">
+      <ul class="menu" id="menu">
+        <li class="menu__item"><a href="#" class="menu__link home">Home</a></li>
+        <div class="cerrar"><a href="#" class="btnCerrar"><img src="./images/cancel.png"></a></div>
+        <li class="menu__item"><a href="#" class="menu__link">Inicio</a></li>
+        <li class="menu__item"><a href="#" class="menu__link">Nosotros</a></li>
+        <li class="menu__item container-submenu">
+          <a href="#" class="menu__link submenu-btn">Productos <img src="./images/down.png" class="submenu-icon"></a>
+          <ul class="submenu">
+            <li class="menu__item"><a href="#" class="menu__link">Televisores</a></li>
+            <li class="menu__item"><a href="#" class="menu__link">Computadores</a></li>
+            <li class="menu__item"><a href="#" class="menu__link">Videojuegos</a></li>
+            <li class="menu__item"><a href="#" class="menu__link">Smartphones</a></li>
+          </ul>
+        </li>
+        <li class="menu__item"><a href="#" class="menu__link">Galería</a></li>
+        <li class="menu__item"><a href="#" class="menu__link">Contacto</a></li>
+      </ul>
+    </nav>
+
+
+
+
+
+		<script type="text/javascript" src="./src/menu.js"></script>
+  </body>
+
+</html>

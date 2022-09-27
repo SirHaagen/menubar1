@@ -1,0 +1,139 @@
+
+:root{
+  --navbars: #cccccc;
+  --hover-light: #b4b4b4;
+  --hover-dark: #8d8d8d;
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  line-height: 1.6;
+}
+#btnMenu{
+  width: 40px;
+  padding-right: 10px;
+  cursor: pointer;
+}
+.submenu-icon{
+  width: 10px;
+}
+.nav_bar{
+  width: 100vw;
+  height: 45px;
+  padding: 10px;
+  background-color: var(--navbars);
+  user-select: none;
+  display: flex;
+  align-items: center;
+}
+.main-nav{
+  user-select: none;
+}
+.menu{
+  height: 45px;       /* GENERAL HEIGHT FOR DESKTOP NAVBAR */
+}
+.menu, .submenu{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.menu{
+  background-color: var(--navbars);
+  width: 150px;
+  position: relative;
+  margin-left: -100%;       /* NORMALLY HIDDEN TO THE LEFT. SHOW WITH JS (MOSTRAR) */
+  transition: margin-left 0.5s;
+}
+.menu .home{
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--hover-dark);
+}
+.menu .cerrar .btnCerrar{
+  height: 93%;
+  width: 30px;
+  background-color: var(--hover-light);
+  position: absolute;
+  top: 0;
+  left: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu .cerrar .btnCerrar img{
+  width: 20px;
+}
+.menu .menu__link{
+  display: block;
+  padding: 10px 15px;
+  font-size: 0.8em;
+  color: #000000;
+  background-color: var(--hover-light);
+  text-decoration: none;
+}
+.menu__link:hover{
+  background-color: var(--hover-dark);
+}
+.submenu{           /* JS TO SHOW THE MENU WHEN CLICKING THE MENU ICON */
+  height: 0;
+  overflow: hidden;
+  border-top: 1px solid var(--hover-dark);
+  transition: all 0.5s;
+}
+.submenu .menu__link{
+  background-color: var(--hover-light);
+  padding-left: 30px;
+}
+.submenu .menu__link:hover{
+  background-color: var(--hover-dark);
+}
+
+.mostrar{           /* SET MARGIN-LEFT TO 0 TO SHOW THE MENU (RESPONSIVE) (JS) */
+  margin-left: 0;
+}
+
+@media screen and (min-width: 1024px) {     /*! DESKTOP MODE */
+  .nav_bar{
+    display: none;
+  }
+  .home{
+    display: none;
+  }
+  .menu{
+    width: 100vw;
+    margin-left: 0;
+    font-size: 1.2em;
+    display: flex;
+  }
+  .menu .home{
+    display: none;
+  }
+  .menu .menu__link{
+    background-color: var(--navbars);
+  }
+  .menu .menu__link:hover{
+    background-color: var(--hover-light);
+  }
+  .menu .cerrar{
+    display: none;
+  }
+  .container-submenu{
+    position: relative;
+  }
+  .submenu{
+    width: 160px;
+    position: absolute;
+    overflow: visible;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 99999;
+  }
+  .container-submenu:hover .submenu{
+    opacity: 1;
+    visibility: visible;
+  }
+}
